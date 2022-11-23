@@ -1,0 +1,37 @@
+package com.example.sumayresta;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText VALOR1;
+    EditText VALOR2;
+    EditText VALORFINAL;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        VALOR1=(EditText)findViewById(R.id.VALOR1);
+        VALOR2=(EditText)findViewById(R.id.VALOR2);
+        VALORFINAL=(EditText)findViewById(R.id.VALORFINAL);
+    }
+
+    public void SUMA (View v){
+        int n1=Integer.parseInt(VALOR1.getText().toString());
+        int n2=Integer.parseInt(VALOR2.getText().toString());
+        int resultado1=n1+n2;
+        VALORFINAL.setText(String.valueOf(resultado1));
+    }
+
+    public void RESTA (View v){
+        int n1=Integer.parseInt(VALOR1.getText().toString());
+        int n2=Integer.parseInt(VALOR2.getText().toString());
+        int resultado2=n1-n2;
+        VALORFINAL.setText(String.valueOf(resultado2));
+    }
+}
