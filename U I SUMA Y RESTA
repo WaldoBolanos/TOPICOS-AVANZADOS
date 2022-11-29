@@ -34,4 +34,14 @@ public class MainActivity extends AppCompatActivity {
         int resultado2=n1-n2;
         VALORFINAL.setText(String.valueOf(resultado2));
     }
+    btncleann.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                num1.setText("");
+                num2.setText("");
+                txtresult.setText("");
+
+                num1.requestFocus();
+            }
+        });
 }
